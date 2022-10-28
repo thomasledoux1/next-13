@@ -5,20 +5,32 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  console.log('root layout rendered');
   return (
     <html lang="en">
       <head>
         <title>Next.js</title>
       </head>
-      <header>
-        <nav>
-          <ul>
-            <li>Test 1</li>
-            <li>Test 2</li>
-          </ul>
-        </nav>
-      </header>
-      <body>{children}</body>
+
+      <body>
+        <header>
+          <nav>
+            <ul>
+              <li>Test 1</li>
+              <li>Test 2</li>
+            </ul>
+          </nav>
+        </header>
+        {children}
+        <footer>
+          <nav>
+            <ul>
+              <li>Test 1</li>
+              <li>Test 2</li>
+            </ul>
+          </nav>
+        </footer>
+      </body>
     </html>
   );
 }
